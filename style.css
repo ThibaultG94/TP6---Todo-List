@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #FE4D21, #FD943C);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: linear-gradient(to right, #5AF5D0, #4BCFF0);
+    height: 100%;
+    border-radius: 40px;
+    margin-top: 200px;
+}
+
+.form-container {
+    padding: 30px 140px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #5E423D;
+    text-shadow: -2px 2px 1px #FE4D21;
+    font-size: 3.3rem;
+    letter-spacing: 8px;
+    margin-bottom: 40px;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    background: linear-gradient(to right, #FE4D21, #FD943C);
+    font-size: 1.3rem;
+    padding: 10px 0 10px 15px;
+    color: #B0ECC2;
+    border-radius: 50px;
+    margin: 0 auto;
+    border: 2px solid rgb(255, 0, 0);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+}
+
+input:focus {
+    border: 2px solid yellow;
+}
+
+input::placeholder {
+    /* color: rgba(255, 255, 255, 0.8); */
+    color: #B0ECC2;
+}
+
+ul {
+    margin: 0 0 40px 80px;
+}
+
+li {
+    font-size: 1.1rem;
+    list-style-type: circle;
+}
