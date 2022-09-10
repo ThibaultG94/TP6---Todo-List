@@ -58,6 +58,12 @@ input::placeholder {
     color: #B0ECC2;
 }
 
+input[type="submit"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
 ul {
     margin: 0 0 40px 80px;
 }
