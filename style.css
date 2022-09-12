@@ -66,11 +66,22 @@ input[type="submit"] {
 
 ul {
     margin: 0 0 40px 80px;
+    width: 50%;
 }
 
 li {
     font-size: 1.2rem;
     list-style-type: circle;
     margin-bottom: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+li::marker {
+    color: black;
+}
+
+span {
+    color: #FE4D21;
+    font-style: italic;
 }
