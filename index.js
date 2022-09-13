@@ -4,6 +4,8 @@ const list = document.querySelector(".list");
 const taskList = document.querySelectorAll("li");
 let data = [];
 let i = 0;
+window.localStorage.getItem(data);
+let mesDonnees = window.localStorage;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -21,18 +23,20 @@ form.addEventListener("submit", (e) => {
   data.push(newLi);
   console.log(data);
   i++;
+  window.localStorage.maBoite = data;
+  mesDonnees = window.localStorage.maBoite;
 });
 
 list.addEventListener("click", (e) => {
-  const span = document.createElement("span");
-  span.textContent = " (terminé)";
   let n = e.target.id;
 
-  if (data[e.target.id][1] === true) {
+  if (data[n][1] === true) {
     e.target.remove();
   } else if (e.target && e.target.nodeName == "LI") {
     e.target.style.listStyleImage = "url('./icons8-checked-12.png')";
-    e.target.appendChild(span);
-    data[e.target.id][1] = true;
+    e.target.classList.add("checked");
+    data[n][1] = true;
+    window.localStorage.maBoite = data;
+    mesDonnees = window.localStorage.maBoite;
   }
 });

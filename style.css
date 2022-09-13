@@ -58,12 +58,6 @@ input::placeholder {
     color: #B0ECC2;
 }
 
-input[type="submit"] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-}
-
 ul {
     margin: 0 0 40px 80px;
     width: 50%;
@@ -75,13 +69,39 @@ li {
     margin-bottom: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     cursor: pointer;
+    animation: anim 1s forwards;
 }
 
 li::marker {
     color: black;
 }
 
-span {
+ul li:after {
+    opacity: 0;
+}
+
+ul li:hover::after {
+    content: " (terminé)";
     color: #FE4D21;
     font-style: italic;
+    font-size: 1rem;
+    animation: anim 500ms forwards;
+}
+
+@keyframes anim {
+    to {
+        opacity: 1;
+    }
+}
+
+li.checked::after {
+    opacity: 0;
+}
+
+li.checked:hover::after {
+    content: " (supprimer)";
+    color: #FE4D21;
+    font-style: italic;
+    font-size: 1rem;
+    animation: anim 500ms forwards;
 }
