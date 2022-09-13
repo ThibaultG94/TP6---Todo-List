@@ -94,6 +94,10 @@ ul li:hover::after {
     }
 }
 
+.checked {
+    list-style-image: url('./icons8-checked-12.png');
+}
+
 li.checked::after {
     opacity: 0;
 }
